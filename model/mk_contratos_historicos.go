@@ -7,9 +7,6 @@ import (
 const TableNameMkContratosHistorico = "mk_contratos_historicos"
 
 type MkContratosHistorico struct {
-	// Relationsships Init
-	Contrato MkContrato `gorm:"foreignKey:codcontrato;references:cd_contrato" json:"contrato,omitempty"`
-	// Relationsships End
 	Codcontratohist int32      `gorm:"column:codcontratohist;not null" json:"codcontratohist,omitempty"`
 	CdContrato      int32      `gorm:"column:cd_contrato" json:"cd_contrato,omitempty"`
 	Dt              *time.Time `gorm:"column:dt" json:"dt,omitempty"`
